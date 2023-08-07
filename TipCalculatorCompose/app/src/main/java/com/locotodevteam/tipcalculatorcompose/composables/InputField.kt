@@ -1,5 +1,6 @@
 package com.locotodevteam.tipcalculatorcompose.composables
 
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
@@ -31,7 +32,8 @@ fun InputField(
     OutlinedTextField(
         value = valueState.value, onValueChange = onValueChange,
         modifier = modifier
-            .padding(bottom = 10.dp, start = 10.dp, end = 10.dp),
+            .padding(bottom = 10.dp, start = 10.dp, end = 10.dp)
+            .fillMaxWidth(),
         leadingIcon = { Icon(imageVector = Icons.Rounded.AttachMoney, contentDescription = "Money icon")},
         label = { Text(text = labelId) },
         enabled = enabled,
